@@ -18,7 +18,8 @@ pipeline {
 				echo "Test"
 				snykSecurity(
                     snykInstallation: 'snyk@latest',
-                    snykTokenId: 'b003fbea-48ef-4ded-9e53-c4b490da2dc4'
+                    snykTokenId: 'b003fbea-48ef-4ded-9e53-c4b490da2dc4',
+                    targetFile: 'out/frontend.dll'
                 )
 			}
 		}
