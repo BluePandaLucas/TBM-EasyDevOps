@@ -16,7 +16,10 @@ pipeline {
 		stage ('Test') {
 			steps {
 				echo "Test"
-				bat "dir out"
+				snykSecurity(
+                    snykInstallation: 'snyk@latest',
+                    snykTokenId: 'b003fbea-48ef-4ded-9e53-c4b490da2dc4'
+                )
 			}
 		}
 	}
